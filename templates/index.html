@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f3f4f6;
+            margin: 0;
+        }
+        .calculator {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"], input[type="number"] {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #4caf50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>ROI Calculator</h1>
+        <form action="/result" method="post">
+            <label for="initial_investment">Initial Investment:</label>
+            <input type="number" name="initial_investment" id="initial_investment" step="0.01" required>
+            <label for="final_value">Final Value:</label>
+            <input type="number" name="final_value" id="final_value" step="0.01" required>
+            <label for="time_period">Time Period (years):</label>
+            <input type="number" name="time_period" id="time_period" step="0.01" required>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
