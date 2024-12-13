@@ -3,57 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROI Result</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f3f4f6;
-            margin: 0;
-        }
-        .result {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-            font-size: 30px;
-        }
-        h2 {
-            color:black;
-            font-size:15px;
-
-        }
-        .retake-button {
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: black solid 2px;
-            background: #4caf50;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-            text-align: center;
-        }
-    </style>
+    <title>Investment Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="result">
-        <h1>ROI Result</h1>
-        <h2>Ayo Berinvestasi</h2>
-        <p>Return on Investment (ROI): {{ roi * 100 }}%</p>
-        <p>Annualized ROI: {{ annualized_roi * 100 }}%</p>
-        <div class="retake-button">
-            <a href="/">Calculate Again</a>
-        </div>
+    <div class="container">
+        <h1 class="my-4">Investment Results</h1>
+        <p>Return on Investment (ROI): {{ roi | round(2) }}</p>
+        <p>Annualized ROI: {{ annualized_roi | round(2) }}</p>
+        <a href="/" class="btn btn-primary">Back</a>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
